@@ -2,7 +2,7 @@ Name:           python-paste
 Version:        1.7.2
 Release:        %mkrel 1
 Summary:        Tools for using a Web Server Gateway Interface stack
-Group:          System Environment/Libraries
+Group:          System/Libraries
 License:        MIT
 URL:            http://pythonpaste.org
 Source0:        http://cheeseshop.python.org/packages/source/P/Paste/Paste-%{version}.tar.gz
