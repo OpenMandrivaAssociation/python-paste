@@ -1,6 +1,6 @@
 Name:           python-paste
 Version:        1.7.2
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          System/Libraries
 License:        MIT
