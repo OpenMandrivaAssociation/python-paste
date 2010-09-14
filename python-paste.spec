@@ -1,6 +1,6 @@
 Name:           python-paste
-Version:        1.7.2
-Release:        %mkrel 3
+Version:        1.7.4
+Release:        %mkrel 1
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          System/Libraries
 License:        MIT
@@ -26,7 +26,7 @@ interfaces.
 
 # clean docs directory
 pushd docs
-rm StyleGuide.txt *.css */*.css */*.js
+rm StyleGuide.txt 
 popd
 
 %build
