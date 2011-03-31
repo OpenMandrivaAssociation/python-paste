@@ -7,7 +7,7 @@ Name:           %{name}
 Version:        %{version}
 Release:        %{release}
 Summary:        Tools for using a Web Server Gateway Interface stack
-Group:          System/Libraries
+Group:          Development/Python
 License:        MIT
 URL:            http://pythonpaste.org
 Source0:        http://pypi.python.org/packages/source/P/%{tarname}/%{tarname}-%{version}.tar.gz
