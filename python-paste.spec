@@ -1,7 +1,7 @@
 %define tarname	Paste
 %define name	python-paste
 %define version	1.7.5.1
-%define release %mkrel 3
+%define release 4
 
 Name:           %{name}
 Version:        %{version}
