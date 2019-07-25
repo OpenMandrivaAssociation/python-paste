@@ -1,21 +1,17 @@
 %define tarname	Paste
-%define name	python-paste
-%define version	1.7.5.1
-%define release 5
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           python-paste
+Version:	3.1.0
+Release:	1
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          Development/Python
 License:        MIT
 URL:            http://pythonpaste.org
-Source0:        http://pypi.python.org/packages/source/P/%{tarname}/%{tarname}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source0:	https://files.pythonhosted.org/packages/36/05/554bf8d9104d8470137daf337ed3ff06dbc8889422e0d4ad53c1011caae4/Paste-3.1.0.tar.gz
 BuildArch:      noarch
 Requires:	python-pkg-resources
 BuildRequires:  python-setuptools
-BuildRequires:	python-sphinx
+#BuildRequires:	python-sphinx
 
 %description
 These provide several pieces of "middleware" (or filters) that can be nested
@@ -28,52 +24,7 @@ interfaces.
 %{__sed} -i -e '/^#!.*/,1 d' paste/util/scgiserver.py paste/debug/doctest_webapp.py
 
 %install
-%__rm -rf %{buildroot}
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot} --record=FILE_LIST
-sed -i 's|^/usr/lib/python2.7/site-packages/Paste-1.7.5.1-py2.7.egg-info$||g' FILE_LIST
-sphinx-build -b html docs html
-rm -f html/.buildinfo
+%py_install
 
-%clean
-%__rm -rf %{buildroot}
-
-%files -f FILE_LIST
-%defattr(-,root,root,-)
-%doc html/
-
-
-
-%changelog
-* Thu Mar 31 2011 Lev Givon <lev@mandriva.org> 1.7.5.1-3mdv2011.0
-+ Revision: 649508
-- Fix group.
-- Build docs properly.
-  Require pkg_resources.
-
-* Tue Nov 02 2010 Crispin Boylan <crisb@mandriva.org> 1.7.5.1-2mdv2011.0
-+ Revision: 591770
-- Rebuild
-
-* Sat Oct 23 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.7.5.1-1mdv2011.0
-+ Revision: 587726
-- update to new version 1.7.5.1
-
-* Tue Sep 14 2010 Crispin Boylan <crisb@mandriva.org> 1.7.4-1mdv2011.0
-+ Revision: 578207
-- 1.7.4
-- New release
-
-* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 1.7.2-3mdv2010.0
-+ Revision: 442336
-- rebuild
-
-* Fri Dec 26 2008 Crispin Boylan <crisb@mandriva.org> 1.7.2-2mdv2009.1
-+ Revision: 319379
-- Rebuild for python2.6
-
-* Thu Dec 04 2008 Crispin Boylan <crisb@mandriva.org> 1.7.2-1mdv2009.1
-+ Revision: 309938
-- Correct group
-- Initial mdv package
-- create python-paste
-
+%files
+%{python_sitelib}/%{tarname}-%{version}*
