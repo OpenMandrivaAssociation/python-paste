@@ -1,13 +1,13 @@
 %define tarname	Paste
 
 Name:           python-paste
-Version:	3.1.0
+Version:	3.2.1
 Release:	1
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          Development/Python
 License:        MIT
 URL:            http://pythonpaste.org
-Source0:	https://files.pythonhosted.org/packages/36/05/554bf8d9104d8470137daf337ed3ff06dbc8889422e0d4ad53c1011caae4/Paste-3.1.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/0d/86/7008b5563594e8a63763f05212a3eb84c85f0b2eff834e5697716e56bca9/Paste-3.2.1.tar.gz
 BuildArch:      noarch
 Requires:	python-pkg-resources
 BuildRequires:  python-setuptools
