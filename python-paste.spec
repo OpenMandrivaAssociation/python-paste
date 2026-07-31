@@ -1,13 +1,13 @@
 %define tarname	Paste
 
 Name:           python-paste
-Version:	3.5.0
+Version:	3.10.1
 Release:	1
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          Development/Python
 License:        MIT
 URL:            https://pythonpaste.org
-Source0:	https://files.pythonhosted.org/packages/b7/e0/eb502f90e14570c88ed108a101ff223ccc853e2ba057ac4e7d6eb40c923e/Paste-3.5.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/b7/e0/eb502f90e14570c88ed108a101ff223ccc853e2ba057ac4e7d6eb40c923e/Paste-3.10.1.tar.gz
 BuildArch:      noarch
 Requires:	python-pkg-resources
 BuildRequires:  python-setuptools
@@ -20,7 +20,7 @@ interface, and should be compatible with other middleware based on those
 interfaces.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -q -n paste-3.10.1
 %{__sed} -i -e '/^#!.*/,1 d' paste/util/scgiserver.py paste/debug/doctest_webapp.py
 
 %install
