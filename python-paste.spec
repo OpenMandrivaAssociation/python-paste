@@ -2,7 +2,7 @@
 
 Name:           python-paste
 Version:	3.10.1
-Release:	1
+Release:	2
 Summary:        Tools for using a Web Server Gateway Interface stack
 Group:          Development/Python
 License:        MIT
