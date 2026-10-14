@@ -9,8 +9,9 @@ License:        MIT
 URL:            https://pythonpaste.org
 Source0:	https://files.pythonhosted.org/packages/b7/e0/eb502f90e14570c88ed108a101ff223ccc853e2ba057ac4e7d6eb40c923e/Paste-3.10.1.tar.gz
 BuildArch:      noarch
-Requires:	python-pkg-resources
-BuildRequires:  python-setuptools
+Requires:	python%{pyver}dist(setuptools)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(setuptools)
 #BuildRequires:	python-sphinx
 
 %description
